@@ -25,7 +25,7 @@ echo.
 echo.
 echo ### JAR ###
 echo.
-jar -cvfM B64-assembly.jar META-INF com org
+jar -cvfM B64-assembly.jar META-INF hr org
 
 echo.
 echo ### Run! ###

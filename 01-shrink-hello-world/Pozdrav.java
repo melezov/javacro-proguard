@@ -1,4 +1,4 @@
-package com.javacro.proguard;
+package hr.javacro.proguard;
 
 import java.util.*;
 
@@ -18,12 +18,10 @@ class Pozdrav {
     }
 
     static class Poruka implements Iterable<String> {
-        Poruka() {
-            final int year = Calc.getYear(2, 0, 1, 5);
-            lines = Arrays.asList("Pozdrav", "sa", "JavaCroa", year + "!");
-        }
+        private final int year = Calc.getYear(2, 0, 1, 5);
 
-        private final Iterable<String> lines;
+        private final Iterable<String> lines =
+            Arrays.asList("Pozdrav", "sa", "JavaCroa", year + "!");
 
         public Iterator<String> iterator() {
             return lines.iterator();

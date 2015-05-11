@@ -1,4 +1,4 @@
-package com.javacro.proguard;
+package hr.javacro.proguard;
 
 import java.io.*;
 

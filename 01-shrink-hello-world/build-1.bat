@@ -9,12 +9,12 @@ cd out-1
 echo.
 echo ### JAVAC ###
 echo.
-javac -verbose ..\Pozdrav.java -d .
+javac ..\Pozdrav.java -d .
 
 echo.
 echo ### JAR ###
 echo.
-jar -cvfe Pozdrav.jar com.javacro.proguard.Pozdrav com
+jar -cvfe Pozdrav.jar hr.javacro.proguard.Pozdrav hr
 
 echo.
 echo ### JD-GUI ###

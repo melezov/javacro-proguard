@@ -9,12 +9,12 @@ cd out-2
 echo.
 echo ### JAVAC ###
 echo.
-javac -verbose ..\Pozdrav.java -d .
+javac ..\Pozdrav.java -d .
 
 echo.
 echo ### JAR ###
 echo.
-jar -cvfe Pozdrav-vanilla.jar com.javacro.proguard.Pozdrav com
+jar -cvfe Pozdrav-vanilla.jar hr.javacro.proguard.Pozdrav hr
 
 echo.
 echo ### Proguard ###
@@ -44,10 +44,10 @@ echo.
 echo ### JAVAP ###
 echo.
 unzip Pozdrav-proguard.jar -d diff
-javap -l -p -c com\javacro\proguard\Pozdrav.class > Pozdrav.javap
-javap -l -p -c com\javacro\proguard\Pozdrav$Poruka.class > Pozdrav$Poruka.javap
-javap -l -p -c diff\com\javacro\proguard\Pozdrav.class > diff\Pozdrav.javap
-javap -l -p -c diff\com\javacro\proguard\a.class > diff\a.javap
+javap -l -p -c hr\javacro\proguard\Pozdrav.class > Pozdrav.javap
+javap -l -p -c hr\javacro\proguard\Pozdrav$Poruka.class > Pozdrav$Poruka.javap
+javap -l -p -c diff\hr\javacro\proguard\Pozdrav.class > diff\Pozdrav.javap
+javap -l -p -c diff\hr\javacro\proguard\a.class > diff\a.javap
 TortoiseGitMerge Pozdrav.javap diff\Pozdrav.javap
 TortoiseGitMerge Pozdrav$Poruka.javap diff\a.javap
 

@@ -9,7 +9,7 @@ cd out-3
 echo.
 echo ### JAVAC ###
 echo.
-javac -verbose ..\Pozdrav.java -d .
+javac ..\Pozdrav.java -d .
 
 echo.
 echo ### CUSTOM manifest ###
@@ -21,7 +21,7 @@ echo.
 echo.
 echo ### JAR ###
 echo.
-jar -cvfM Pozdrav-vanilla.jar META-INF com
+jar -cvfM Pozdrav-vanilla.jar META-INF hr
 echo.
 
 echo.
@@ -44,14 +44,14 @@ echo.
 echo ### ZOPFLI ###
 echo.
 pushd unzip
-zopfli -a4 -i 200 ..\Pozdrav-proguard-zopfli.jar META-INF com
+zopfli -a4 -i 200 ..\Pozdrav-proguard-zopfli.jar META-INF hr
 popd
 
 echo.
 echo ### KZIP ###
 echo.
 pushd unzip
-kzip /r ..\Pozdrav-proguard-kzip.jar META-INF com
+kzip /r ..\Pozdrav-proguard-kzip.jar META-INF hr
 popd
 
 echo.
