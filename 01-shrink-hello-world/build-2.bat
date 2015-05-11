@@ -19,7 +19,7 @@ jar -cvfe Pozdrav-vanilla.jar hr.javacro.proguard.Pozdrav hr
 echo.
 echo ### Proguard ###
 echo.
-copy ..\res\Pozdrav.pro . > NUL
+copy ..\res\Pozdrav-2.pro Pozdrav.pro > NUL
 call proguard @Pozdrav.pro
 
 echo.

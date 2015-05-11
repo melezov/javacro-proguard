@@ -21,7 +21,7 @@ class Pozdrav {
         private final int year = Calc.getYear(2, 0, 1, 5);
 
         private final Iterable<String> lines =
-            Arrays.asList("Pozdrav", "sa", "JavaCroa", year + "!");
+            Arrays.asList("Pozdrav", "sa", "JavaCro", year + "!");
 
         public Iterator<String> iterator() {
             return lines.iterator();
