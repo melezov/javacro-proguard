@@ -3,8 +3,27 @@ package com.javacro.proguard;
 import java.util.*;
 
 class Pozdrav {
+    static class Calc {
+        public static int getYear(int y1000, int y100, int y10, int y1) {
+            if (y1000 > 0) {
+                return getYear(0, 10 * y1000 + y100, y10, y1);
+            } else if (y100 > 0) {
+                return getYear(0, 0, 10 * y100 + y10, y1);
+            } else if (y10 > 0) {
+                return getYear(0, 0, 0, 10 * y10 + y1);
+            } else {
+                return y1;
+            }
+        }
+    }
+
     static class Poruka implements Iterable<String> {
-        private final List<String> lines = Arrays.asList("Pozdrav", "sa", "JavaCroa!");
+        Poruka() {
+            final int year = Calc.getYear(2, 0, 1, 5);
+            lines = Arrays.asList("Pozdrav", "sa", "JavaCroa", year + "!");
+        }
+
+        private final Iterable<String> lines;
 
         public Iterator<String> iterator() {
             return lines.iterator();
